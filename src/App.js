@@ -9,7 +9,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8001/transactions') // Assuming json-server is running on this URL
+    fetch('http://localhost:8001/transactions') 
       .then(response => response.json())
       .then(data => {
         setTransactions(data);
@@ -47,6 +47,6 @@ const App = () => {
   );
 };
 
-// ... TransactionForm and TransactionTable components remain the same
+
 
 export default App;
