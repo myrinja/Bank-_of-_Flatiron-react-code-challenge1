@@ -14,9 +14,7 @@ const App = () => {
       .then(data => {
         setTransactions(data);
       })
-      .catch(error => {
-        console.error("Error fetching data:", error);
-      });
+     
   }, []);
 
   const addTransaction = (description, amount) => {
@@ -42,7 +40,7 @@ const App = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <TransactionForm addTransaction={addTransaction} />
-      <TransactionTable transactions={filterTransactions} />
+      <TransactionTable transactions={filterTransactions}  />
     </div>
   );
 };

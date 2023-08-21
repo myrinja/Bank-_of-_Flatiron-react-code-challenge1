@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 const TransactionForm = ({ addTransaction }) => {
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
-
+  const[date,setDate]=useState('')
   const handleSubmit = (e) => {
     e.preventDefault();
     addTransaction(description, amount);
     setDescription('');
     setAmount('');
+    setAmount('')
   };
 
   return (
@@ -28,6 +29,14 @@ const TransactionForm = ({ addTransaction }) => {
         onChange={(e) => setAmount(e.target.value)}
         required
       />
+       <input
+        type="Date"
+        placeholder="Date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        required
+      />
+     
       <button type="submit">Add Transaction</button>
     </form>
   );

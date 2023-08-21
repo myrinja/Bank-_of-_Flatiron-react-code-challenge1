@@ -4,11 +4,11 @@ import React from 'react';
 const TransactionTable = ({ transactions }) => (
   <table >
     <thead>
-      <tr>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Amount</th>
+      <tr className='table'>
+        <th className='th1'>Date</th>
+        <th className='th2'>Description</th>
+        <th className='th3'>Category</th>
+        <th className='th4'>Amount</th>
       </tr>
     </thead>
     <tbody>
